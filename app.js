@@ -9,6 +9,7 @@ const articales = document.querySelector("#articales");
 const containera = document.querySelector("#containera");
 const s1 = document.querySelector("s1");
 const contact = document.getElementById("contact");
+let navLinks = document.querySelectorAll("a");
 
 btnHamburger.addEventListener("click", () => {
   console.log("click hamburger");
@@ -40,18 +41,13 @@ document.querySelector("#bttn").addEventListener("click", () => {
     body.classList.remove("s11");
   }
 });
-/*
-document.getElementById('contact').addEventListener('click',fun);
-fun(){
 
-document.querySelector('#hero').innerHTML=" ";
-
-
- body.classList.remove('hero');
-  body.classList.remove('articales');
-  body.classList.remove('feature');
-//element.classList.remove('hero');
-//element.classList.remove('feature');
-//element.classList.remove('articales');
-}
-*/
+//Scrolling smoothly to the section
+navLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    let targetId = link.getAttribute("href");
+    let target = document.querySelector(targetId);
+    target.scrollIntoView({ behavior: "smooth" });
+  });
+});
