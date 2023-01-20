@@ -217,7 +217,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: -30px;
-  background: linear-gradient(to right, rgb(255, 81, 0), rgb(255, 255, 0));
+  background: linear-gradient(to right, rgb(3, 55, 30), rgb(17, 255, 0));
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
